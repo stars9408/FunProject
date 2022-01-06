@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Board</title>
+    <link rel="stylesheet" type="text/css" href="./css/board.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h1 onclick="location.href = './board_list.html'">자유 게시판</h1>
+    </div>
+    <div id="container">
+        <div>
+            <h3>글 작성</h3>
+        </div>
+        <hr>
+        <div id="contents">
+            <form>
+                <div id="contents_header">
+                    <div class="content_header">
+                        <p>제목</p>
+                        <input type="text" id="board_title" placeholder="제목을 입력하세요.">
+                    </div>
+                    <div class="content_header">
+                        <p>작성자</p>
+                        <input type="text" id="board_author" placeholder="작성자를 입력하세요.">
+                    </div>
+                </div>
+                <div class="content">
+                    <p>내용</p>
+                    <textarea type="textarea" id="board_contents" placeholder="내용을 입력하세요."></textarea>
+                </div>
+                <div id="btn-content">
+                    <div id="btn_area">
+                        <input type="submit" value="작성">
+                    </div>
+                    <div id="btn_area">
+                        <input type="button" value="취소" onclick="location.href='./board_list.html'">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const BOARD = 'board';
+        let nums = 1;
+
+        /*
+            게시글 작성
+        */
+        $('form').on('submit', function (event) {
+            // Prevent the page from reloading
+            event.preventDefault();
+
+            let date = new Date();
+            let views = 0;
+            let title = $("#board_title").val();
+            let author = $("#board_author").val();
+            let content = $("#board_contents").val();
+
+            if (title === '' || author === '' || content === '') {
+                alert('빈칸이 존재합니다.');
+            } else {
+                const lists = JSON.parse(localStorage.getItem(BOARD));
+                if (!lists) {
+                    const objArr = [];
+                    objArr.push({
+                        num: `${nums++}`,
+                        title: `${title}`,
+                        author: `${author}`,
+                        content: `${content}`,
+                        views: `${views++}`,
+                        date: `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`,
+                    });
+
+                    localStorage.setItem(BOARD, JSON.stringify(objArr));
+                } else {
+                    lists.push({
+                        num: `${nums++}`,
+                        title: `${title}`,
+                        author: `${author}`,
+                        content: `${content}`,
+                        views: `${views++}`,
+                        date: `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`,
+                    });
+
+                    localStorage.setItem(BOARD, JSON.stringify(lists));
+                }
+
+                window.location.replace("./board_list.html");
+            }
+        });
+
+        /*
+            list index 정하기
+        */
+        function assignIndex() {
+            const lists = JSON.parse(localStorage.getItem(BOARD));
+            if (!lists) {
+                nums = 1;
+            } else {
+                nums = parseInt(lists[lists.length - 1].num) + 1;
+            }
+        }
+
+        window.onload = function () {
+            assignIndex();
+        }
+    </script>
+</body>
+</html>
