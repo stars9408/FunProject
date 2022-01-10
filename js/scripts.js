@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 $(document).ready(function () {
-    alert("HELLO");
+    // alert("굿뉴스코 총동문회 홈페이지 접속 완료");
     var adminID = "admin";
     var adminPW = "admin";
 
