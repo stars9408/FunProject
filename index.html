@@ -18,6 +18,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -29,10 +30,23 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../FunProject/src/index.html">메인 페이지로 가기</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="../FunProject/src/index.html">메인 페이지로 가기</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="../FunProject/src/community.html">커뮤니티 입장</a></li>
+                    <table>
+                        <tr>
+                            <td><label>ID</label></td>
+                            <td><input type="text" id="userId" placeholder="아이디를 입력하세요."></td>
+                            <td rowspan="2"><button id="btnLogin">로그인</button></td>
+                        </tr>
+                        <tr>
+                            <td><label>PW</label></td>
+                            <td><input type="password" id="passwd" placeholder="비밀번호를 입력하세요."></td>
+                        </tr>
+                    </table>
+
                 </ul>
             </div>
         </div>
@@ -110,14 +124,14 @@
     </section>
     <!-- Portfolio-->
     <div id="portfolio">
-        <div class="container-fluid p-0">
+        <!-- --><div class="container-fluid p-0">
             <div class="row g-0">
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 1</div>
                         </div>
                     </a>
                 </div>
@@ -126,7 +140,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 2</div>
                         </div>
                     </a>
                 </div>
@@ -135,7 +149,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 3</div>
                         </div>
                     </a>
                 </div>
@@ -144,7 +158,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 4</div>
                         </div>
                     </a>
                 </div>
@@ -153,7 +167,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 5</div>
                         </div>
                     </a>
                 </div>
@@ -162,7 +176,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
                         <div class="portfolio-box-caption p-3">
                             <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
+                            <div class="project-name">활동내용 6</div>
                         </div>
                     </a>
                 </div>
@@ -176,112 +190,117 @@
             <a class="btn btn-light btn-xl" onclick="window.open('donate.html','window_name','width=700,height=700,location=no,status=no,scrollbars=yes,left=500,right=500');">총동문회에 기부해주세요!</a>
         </div>
     </section>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">동문회 커뮤니티 사용을 위해 회원가입을 해주세요. <br />가입 후 대륙장으로부터 가입허가을 기다려주세요. <br />동문들만을 위한 공간을 위해 양해부탁드립니다!</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- 이름 input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">이름</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">이름을 입력해주세요.</div>
-                            </div>
-                            <!-- 생년월일 number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="birthday" type="date" placeholder="YYYY-MM-DD" data-sb-validations="required" min="1900-01-01" max="2022-12-31" />
-                                <label for="phone">생년월일</label>
-                                <div class="invalid-feedback" data-sb-feedback="birthday:required">생년월일을 입력해주세요.</div>
-                            </div>
-                            <!-- 기수 address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="class" type="text" placeholder="1기" data-sb-validations="required" />
-                                <label for="class">기수(숫자만 /  *유학생은 '명예단원' 입력)</label>
-                                <div class="invalid-feedback" data-sb-feedback="class:required">기수를 입력해주세요.유학생이라면 '명예단원'을 입력해주세요.</div>
-                            </div>
-                            <!-- 나라 number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="country" type="text" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="country">나라명(한글)</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- 현재 소속 지역 number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="region" type="text" placeholder="서울/경인/충청/강원..." data-sb-validations="required" />
-                                <label for="region">소속지역(예: 서울)</label>
-                                <div class="invalid-feedback" data-sb-feedback="region:required">Region is required.</div>
-                            </div>
-                            <!-- ID input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="ID" type="text" placeholder="ID" data-sb-validations="required" />
-                                <label for="ID">ID</label>
-                                <div class="invalid-feedback" data-sb-feedback="ID:required">사용할 ID를 입력하세요.</div>
-                            </div>
-                            <!-- PW1 input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="password1" type="password" placeholder="Password" data-sb-validations="required" />
-                                <label for="password1">비밀번호</label>
-                                <div class="invalid-feedback" data-sb-feedback="password1:required">사용할 비밀번호를 입력하세요.</div>
-                            </div>
-                            <!-- PW2 input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="password2" type="password" placeholder="Password" data-sb-validations="required" />
-                                <label for="password2">비밀번호 확인</label>
-                                <div class="invalid-feedback" data-sb-feedback="password2:required">비밀번호를 한번 더 입력하세요.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">회원가입 요청이 완료되었습니다.</div>
-                                    <br />
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">회원가입 신청 중 에러가 발생했습니다!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button style="display: none" class="btn btn-primary btn-xl" id="submitButton" type="submit">Register</button></div>
-                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="registerButton" type="submit">Register</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>
-                            문의<br />
-                            +82 (010)-0000-0000<br />
-                            gnc@gmail.com<br />
-                        </div>
-                    </div>
+    <!-- Contact-->
+    <section class="page-section" id="register">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">동문회 커뮤니티 사용을 위해 회원가입을 해주세요. <br />가입 후 대륙장으로부터 가입허가을 기다려주세요. <br />동문들만을 위한 공간을 위해 양해부탁드립니다!</p>
                 </div>
             </div>
-        </section>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- 이름 input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">이름</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">이름을 입력해주세요.</div>
+                        </div>
+                        <!-- 생년월일 number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="birthday" type="date" placeholder="YYYY-MM-DD" data-sb-validations="required" min="1900-01-01" max="2022-12-31" />
+                            <label for="phone">생년월일</label>
+                            <div class="invalid-feedback" data-sb-feedback="birthday:required">생년월일을 입력해주세요.</div>
+                        </div>
+                        <!-- 기수 address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="class" type="text" placeholder="1기" data-sb-validations="required" />
+                            <label for="class">기수(숫자만 /  *유학생은 '명예단원' 입력)</label>
+                            <div class="invalid-feedback" data-sb-feedback="class:required">기수를 입력해주세요.유학생이라면 '명예단원'을 입력해주세요.</div>
+                        </div>
+                        <!-- 나라 number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="country" type="text" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="country">나라명(한글)</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <!-- 현재 소속 지역 number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="region" type="text" placeholder="서울/경인/충청/강원..." data-sb-validations="required" />
+                            <label for="region">소속지역(예: 서울)</label>
+                            <div class="invalid-feedback" data-sb-feedback="region:required">Region is required.</div>
+                        </div>
+                        <!-- ID input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="ID" type="text" placeholder="ID" data-sb-validations="required" />
+                            <label for="ID">ID</label>
+                            <div class="invalid-feedback" data-sb-feedback="ID:required">사용할 ID를 입력하세요.</div>
+                        </div>
+                        <!-- PW1 input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="password1" type="password" placeholder="Password" data-sb-validations="required" />
+                            <label for="password1">비밀번호</label>
+                            <div class="invalid-feedback" data-sb-feedback="password1:required">사용할 비밀번호를 입력하세요.</div>
+                        </div>
+                        <!-- PW2 input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="password2" type="password" placeholder="Password" data-sb-validations="required" />
+                            <label for="password2">비밀번호 확인</label>
+                            <div class="invalid-feedback" data-sb-feedback="password2:required">비밀번호를 한번 더 입력하세요.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">회원가입 요청이 완료되었습니다.</div>
+                                <br />
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">회원가입 신청 중 에러가 발생했습니다!</div></div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button style="display: none" class="btn btn-primary btn-xl" id="submitButton" type="submit">Register</button></div>
+                        <div class="d-grid"><button class="btn btn-primary btn-xl" id="registerButton" type="submit">Register</button></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                <div>
+                    문의<br />
+                    굿뉴스코 총동문회 회장: □■□<br />
+                    +82 (010)-0000-0000<br />
+                    gnc@gmail.com<br />
+                </div>
+            </div>
+        </div>
+    </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - 굿뉴스코 총동문회</div></div>

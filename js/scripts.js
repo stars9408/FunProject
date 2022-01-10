@@ -77,8 +77,30 @@ $(document).ready(function () {
 
         alert("회원가입 요청: " + ID + " " + PW + " " + PW2 + " " + Name + " " + Birthday + " " + Class + " " + Country + " " + Region + " " + Message + " ");
     })
+
+    var adminID = "admin";
+    var adminPW = "admin";
+    $("#btnLogin").click(function () {
+        var uID = $("#userId").val();
+        var uPW = $("#passwd").val();
+        if (!uID || !uPW) {
+            alert("Enter Login Credentials");
+        } else {
+            if (uID == adminID) {
+                if (uPW == adminPW) {
+                    alert("Login Successful... Let me guide you to the GNCAA Comm.");
+                   
+                    window.location.href = "../FunProject/src/community.html";
+                } else {
+                    console.log("Incorrect PW");
+                    alert("Incorrect Credential.");
+                    saveLogin("");
+                }
+            } else {
+                console.log("Incorrect ID");
+                alert("Incorrect Credential.");
+            }
+        }
+    })
 })
-
-
-
 
