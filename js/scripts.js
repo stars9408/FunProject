@@ -75,7 +75,7 @@ $(document).ready(function () {
         var Region = $("#region").val();
         var Message = $("#message").val();
 
-        alert(ID + " " + PW + " " + PW2 + " " + Name + " " + Birthday + " " + Class + " " + Country + " " + Region + " " + Message + " ");
+        alert("회원가입 요청: " + ID + " " + PW + " " + PW2 + " " + Name + " " + Birthday + " " + Class + " " + Country + " " + Region + " " + Message + " ");
     })
 })
 
